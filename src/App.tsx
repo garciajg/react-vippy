@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import ImageComponent from './components/Image';
+import UploadImage from './components/ImageUpload';
+import Description from './components/Description';
+import Header from './components/Header';
 import logo from './logo.svg';
 import './App.css';
 
@@ -8,18 +12,12 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <Header name="COFFEE" />
+          <h1>Welcome to Vippy</h1>
         </header>
+        <Description countBy={4} />
+        <ImageComponent token="legittoken" ctype="image/jpeg" />
+        <UploadImage />
       </div>
     );
   }
